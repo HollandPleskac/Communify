@@ -9,7 +9,11 @@ module.exports = {
       'serif': [...defaultTheme.fontFamily.serif],
       'mono': [...defaultTheme.fontFamily.mono]
     },
-    extend: {},
+    extend: {
+      width: {
+        mainContent: 'calc(100vw - 260px)'
+      }
+    },
   },
   variants: {
     extend: {},
