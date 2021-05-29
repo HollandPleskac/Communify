@@ -10,6 +10,9 @@ module.exports = {
       'mono': [...defaultTheme.fontFamily.mono]
     },
     extend: {
+      backgroundImage: theme => ({
+        'beach': "url('/beach.jpg')"
+      }),
       width: {
         mainContent: 'calc(100vw - 260px)'
       }
