@@ -7,10 +7,12 @@ const Dashboard = () => {
   return (
     <Navigation>
       <div className='h-screen w-mainContent flex justify-center items-center' >
-        <div className='flex justify-center bg-blue-400 w-1/2' >
+        <div className='h-screen flex flex-col items-center justify-evenly w-1/2' >
+          <PostWidget />
+          <PostWidget />
           <PostWidget />
         </div>
-        <div className='flex justify-center bg-red-400 w-1/2' >
+        <div className='flex flex-col items-center w-1/2' >
           <WeatherWidget />
         </div>
       </div>
@@ -32,7 +34,7 @@ const WeatherWidget = (params) => {
 
 const PostWidget = (params) => {
   return (
-    <div className='flex items-end h-60 w-96 rounded-lg bg-beach bg-cover' style={{ backgroundImage: 'url(/tennis-court.jfif)' }} >
+    <div className='flex items-end h-52 w-96 rounded-lg bg-beach bg-cover' style={{ backgroundImage: 'url(/tennis-court.jfif)' }} >
       <div className='p-2 mb-4 ml-4 backdrop-filter backdrop-blur-3xl rounded-md' >
         Playing Tennis With Nerds
       </div>
