@@ -21,7 +21,7 @@ const Header = () => {
   return (
     <div className='w-full flex items-center justify-between shadow py-4 px-6' >
       <div className='flex items-center' >
-        <img src="/logo-blue.png" width='55' alt="Logo" className='mr-3' />
+        <img src="/logo.png" width='50' alt="Logo" className='mr-4' />
         <p className='text-xl text-gray-800' >Communify</p>
       </div >
       <div className='flex items-center' >
@@ -31,7 +31,7 @@ const Header = () => {
         <LandingLink name='Get Started' href='#' />
       </div>
       <div className='flex items-center' >
-        <button onClick={navHandler} className='text-white rounded-xl px-4 py-2 bg-blue-700 hover:bg-blue-800 transition ease-in duration-100 focus:outline-none' >Login</button>
+        <button onClick={navHandler} className='text-white rounded-xl px-4 py-2 bg-yellow-500 hover:bg-yellow-600 transition ease-in duration-100 focus:outline-none' >Login</button>
       </div>
     </div >
   )
@@ -51,11 +51,11 @@ const LandingLink = (props) => {
 const HomeContent = () => {
   return (
     <div className='w-full h-3/4 flex flex-col justify-center items-center my-auto' >
-      <h1 className='text-7xl text-blue-700 mb-9 '>Communify</h1>
+      <h1 className='text-7xl text-yellow-500 mb-9 '>Communify</h1>
       <p className='text-lg text-center text-gray-800 mb-9' >The smartest way to farm<br />dark energy crystals.</p>
       <div>
-        <button className=' border-2 border-blue-700 text-blue-700 hover:bg-blue-800 hover:text-white px-8 py-3 rounded-lg transition ease-in duration-100 focus:outline-none mr-4' >Learn More</button>
-        <button className='border-2 border-blue-700 bg-blue-700 text-white hover:bg-blue-800 px-8 py-3 rounded-lg transition ease-in duration-100 focus:outline-none' >Get Started</button>
+        <button className=' border-2 border-yellow-500 text-yellow-500 hover:bg-yellow-600 hover:border-yellow-600 hover:text-white px-8 py-3 rounded-lg transition ease-in duration-100 focus:outline-none mr-4' >Learn More</button>
+        <button className='border-2 border-yellow-500 bg-yellow-500 text-white hover:bg-yellow-600 hover:border-yellow-600 px-8 py-3 rounded-lg transition ease-in duration-100 focus:outline-none' >Get Started</button>
       </div>
     </div>
   )

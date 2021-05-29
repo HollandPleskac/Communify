@@ -9,7 +9,7 @@ const Navigation = (props) => {
   return (
     <div className='flex' >
       <div className='p-6 bg-white shadow-lg' style={{ width: '260px' }} >
-        <h1 className='mb-10 text-2xl text-yellow-400 text-center font-bold' >Communify</h1>
+        <h1 className='mb-10 text-2xl text-yellow-500 text-center font-bold' >Communify</h1>
         <SidebarLink name='Dashboard' href='/dashboard' icon={faTachometerAlt} />
         <SidebarLink name='Goals' href='/goals' icon={faBullseye} />
         <SidebarLink name='Clubs' href='/clubs' icon={faCubes} />
@@ -24,8 +24,8 @@ const SidebarLink = (props) => {
 
   const router = useRouter()
 
-  const divClasses = router.pathname === props.href ? 'bg-yellow-400 hover:bg-yellow-500' : 'bg-white hover:bg-yellow-400 '
-  const textClasses = router.pathname === props.href ? 'text-white' : 'text-yellow-400 group-hover:text-white'
+  const divClasses = router.pathname === props.href ? 'bg-yellow-500' : 'bg-white hover:bg-yellow-500 '
+  const textClasses = router.pathname === props.href ? 'text-white' : 'text-yellow-500 group-hover:text-white'
 
   return (
     <Link href={props.href} passHref>
