@@ -3,39 +3,74 @@ import Link from 'next/Link'
 import { useRouter } from 'next/router'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTachometerAlt, faBullseye, faCubes, faCalendar } from '@fortawesome/free-solid-svg-icons'
+import { faTachometerAlt, faBullseye, faCubes, faCalendar, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 
 const Navigation = (props) => {
   return (
     <div className='flex' >
-      <div className='p-6 bg-white shadow-lg' style={{ width: '260px' }} >
-        <h1 className='mb-10 text-2xl text-yellow-500 text-center font-bold' >Communify</h1>
-        <SidebarLink name='Dashboard' href='/dashboard' icon={faTachometerAlt} />
-        <SidebarLink name='Goals' href='/goals' icon={faBullseye} />
-        <SidebarLink name='Clubs' href='/clubs' icon={faCubes} />
-        <SidebarLink name='Calendar' href='/calendar' icon={faCalendar} />
-      </div >
+      <div className='h-screen flex flex-col justify-center p-6' style={{ width: '260px' }}>
+        <Card color='bg-gray-100' >
+          <p className='text-gray-600 text-center' >Community</p>
+        </Card>
+        <Card color='bg-gray-100'>
+          <SidebarLink name='Dashboard' icon={faTachometerAlt} href='/dashboard' />
+          <SidebarLink name='Goals' icon={faBullseye} href='/goals' />
+          <SidebarLink name='Clubs' icon={faCubes} href='/clubs' />
+          <SidebarLink name='Calendar' icon={faCalendar} href='/calendar' />
+        </Card>
+        <Card color='bg-gray-100'>
+          <SidebarLink name='Sign Out' icon={faSignOutAlt} href='/' />
+        </Card>
+      </div>
       {props.children}
     </div>
   )
 }
 
-const SidebarLink = (props) => {
+const Card = (props) => {
+  return (
+    <div className={'p-4 mb-5 rounded-lg ' + props.color} >{props.children}</div>
+  )
+}
 
+const SidebarLink = (props) => {
   const router = useRouter()
 
-  const divClasses = router.pathname === props.href ? 'bg-yellow-500' : 'bg-white hover:bg-yellow-500 '
-  const textClasses = router.pathname === props.href ? 'text-white' : 'text-yellow-500 group-hover:text-white'
+  const colorClasses = props.href === router.pathname ? 'text-yellow-500' : 'text-gray-600 group-hover:text-yellow-500'
+  const paddingClasses = props.name === 'Sign Out' ? 'mb-0' : 'mb-5'
 
   return (
     <Link href={props.href} passHref>
-      <div className={'group px-4 py-2 mb-1 rounded-md cursor-pointer transition ease-in duration-100 ' + divClasses} >
-        <FontAwesomeIcon icon={props.icon} className={'mr-4 text transition ease-in duration-100 ' + textClasses} />
-        <a className={'text ' + textClasses} >{props.name}</a>
+      <div className={'group mx-7 cursor-pointer ' + paddingClasses} >
+        <FontAwesomeIcon icon={props.icon} className={'mr-4 transition ease-in duration-100 ' + colorClasses} />
+        <a className={'transition ease-in duration-100 ' + colorClasses} >{props.name}</a>
+      </div>
+    </Link>
+  )
+}
+
+const SignOutLink = (props) => {
+  const router = useRouter()
+
+  const colorClasses = props.href === router.pathname ? 'text-yellow-600' : 'text-gray-600 group-hover:text-yellow-600'
+
+  return (
+    <Link href='/' passHref>
+      <div className='group mx-7 cursor-pointer' >
+        <FontAwesomeIcon icon={faSignOutAlt} className={'mr-4 transition ease-in duration-100 ' + colorClasses} />
+        <a className={'transition ease-in duration-100 ' + colorClasses} >Sign Out</a>
       </div>
     </Link>
   )
 }
 
 
+
 export default Navigation
+
+
+// Code the Dasbhoard and Make it look nice
+// Fix the spacing so its even
+  // fixed padding between sections
+  // color the sections before adding content
+// Add all of the remaining features
