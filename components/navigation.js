@@ -10,12 +10,12 @@ const Navigation = (props) => {
     <div className='h-screen flex' >
       <div className='h-full flex flex-col justify-center p-10' style={{ width: '360px' }}>
         <Card color='bg-gray-100' >
-          <p className='text-gray-600 text-center' >Community</p>
+          <p className='text-gray-600 text-center' >Communify</p>
         </Card>
         <Card color='bg-gray-100'>
           <SidebarLink name='Dashboard' icon={faTachometerAlt} href='/dashboard' />
           <SidebarLink name='Goals' icon={faBullseye} href='/goals' />
-          <SidebarLink name='Clubs' icon={faCubes} href='/clubs' />
+          <SidebarLink name='Community' icon={faCubes} href='/community' />
           <SidebarLink name='Calendar' icon={faCalendar} href='/calendar' />
         </Card>
         <Card color='bg-gray-100'>
