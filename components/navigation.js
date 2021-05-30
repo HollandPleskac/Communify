@@ -19,6 +19,7 @@ const Navigation = (props) => {
           <SidebarLink name='Calendar' icon={faCalendar} href='/calendar' />
         </Card>
         <Card color='bg-gray-100'>
+          <ProfileLink />
           <SidebarLink name='Sign Out' icon={faSignOutAlt} href='/' />
         </Card>
       </div>
@@ -49,28 +50,17 @@ const SidebarLink = (props) => {
   )
 }
 
-const SignOutLink = (props) => {
-  const router = useRouter()
-
-  const colorClasses = props.href === router.pathname ? 'text-yellow-600' : 'text-gray-600 group-hover:text-yellow-600'
-
+const ProfileLink = (props) => {
   return (
-    <Link href='/' passHref>
-      <div className='group mx-7 cursor-pointer' >
-        <FontAwesomeIcon icon={faSignOutAlt} className={'mr-4 transition ease-in duration-100 ' + colorClasses} />
-        <a className={'transition ease-in duration-100 ' + colorClasses} >Sign Out</a>
+    <Link href='' passHref>
+      <div className='group flex items-center mx-7 mb-5 cursor-pointer' >
+        {/* <FontAwesomeIcon icon={props.icon} className={'mr-4 transition ease-in duration-100 ' + colorClasses} /> */}
+        <img src="prof.jpg" alt="Pic" width='19' className='rounded-full inline-block mr-4' />
+        <a className='transition text-gray-600 hover:text-yellow-500 ease-in duration-100' >Shabd V</a>
       </div>
     </Link>
   )
 }
 
 
-
 export default Navigation
-
-
-// Code the Dasbhoard and Make it look nice
-// Fix the spacing so its even
-  // 3 columns of some fixed width (or dynamic width) --> separated by margin of x
-  // padding all around
-// Add all of the remaining features
