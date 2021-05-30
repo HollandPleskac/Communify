@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
     <Navigation>
       <div className='flex w-mainContent justify-center' >
-        <div className='flex flex-col items-center w-7/12 py-10 px-24' >
+        <div className='flex flex-col items-center w-7/12 py-10' >
           <PostWidget />
           <PostWidget />
           <PostWidget />
@@ -31,7 +31,7 @@ const Dashboard = () => {
 
 const PostWidget = () => {
   return (
-    <div className='h-48 w-full my-2 flex items-end rounded-lg bg-beach bg-cover' style={{ backgroundImage: 'url(/tennis-court.jfif)' }} >
+    <div className='h-48 w-full my-2 flex items-end rounded-lg bg-beach bg-cover bg-right-bottom' style={{ backgroundImage: 'url(/tennis.jfif)' }} >
       <div className='p-2 mb-5 ml-5 backdrop-filter backdrop-blur-3xl rounded-md' >
         Playing Tennis With Nerds
       </div>
