@@ -31,9 +31,9 @@ const Dashboard = () => {
 
 const PostWidget = () => {
   return (
-    <div className='h-48 w-full my-2 flex items-end rounded-lg bg-beach bg-cover bg-right-bottom' style={{ backgroundImage: 'url(/tennis.jfif)' }} >
+    <div className='h-48 w-full my-2 flex items-end rounded-lg bg-beach bg-cover bg-top' style={{ backgroundImage: 'url(/trees.jpg)' }} >
       <div className='p-2 mb-5 ml-5 backdrop-filter backdrop-blur-3xl rounded-md' >
-        Playing Tennis With Nerds
+        Planting Trees at MHHS Parkway
       </div>
     </div>
   )
