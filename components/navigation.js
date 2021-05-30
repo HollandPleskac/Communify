@@ -7,8 +7,8 @@ import { faTachometerAlt, faBullseye, faCubes, faCalendar, faSignOutAlt } from '
 
 const Navigation = (props) => {
   return (
-    <div className='flex' >
-      <div className='h-screen flex flex-col justify-center p-6' style={{ width: '260px' }}>
+    <div className='h-screen flex' >
+      <div className='h-full flex flex-col justify-center p-10' style={{ width: '360px' }}>
         <Card color='bg-gray-100' >
           <p className='text-gray-600 text-center' >Community</p>
         </Card>
@@ -71,6 +71,6 @@ export default Navigation
 
 // Code the Dasbhoard and Make it look nice
 // Fix the spacing so its even
-  // fixed padding between sections
-  // color the sections before adding content
+  // 3 columns of some fixed width (or dynamic width) --> separated by margin of x
+  // padding all around
 // Add all of the remaining features
