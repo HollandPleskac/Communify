@@ -22,7 +22,7 @@ const Header = () => {
     <div className='w-full flex items-center justify-between shadow py-4 px-6' >
       <div className='flex items-center' >
         <img src="/logo.png" width='50' alt="Logo" className='mr-4' />
-        <p className='text-xl text-gray-800' >Communify</p>
+        <p className='text-xl text-gray-800' >Commas;djf;klasjunify</p>
       </div >
       <div className='flex items-center' >
         <LandingLink name='Home' href='#' />
