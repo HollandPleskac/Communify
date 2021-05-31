@@ -10,15 +10,17 @@ const Dashboard = () => {
     <Navigation>
       <div className='flex w-mainContent justify-center' >
         <div className='flex flex-col items-center w-7/12 py-10' >
-          <PostWidget />
-          <PostWidget />
-          <PostWidget />
+          <PostWidget name='Planting Trees at MHHS Parkway' />
+          <PostWidget name='Build a Playground' />
+          <PostWidget name='Promote Carpooling' />
         </div>
         <div className='flex flex-col items-center w-5/12 p-10' >
           <WeatherWidget />
-          <EventWidget />
-          <EventWidget />
-          <EventWidget />
+          <EventWidget name='Pumpkin Festival' description='The pumpkin festival is a 2 day event taking place at the
+          Mountain House High School.' />
+          <EventWidget name='Earth Day' description='Celebrate the Earth by coming out the Grant Line to  drive by the school.' />
+          <EventWidget name='Halloween' description='Halloween is a fun day where everyone dresses up as
+          se.' />
           <div className='flex justify-evenly mt-3' style={{ width: '450px' }} >
             <GoalsWidget />
             <GoalsWidget />
@@ -29,11 +31,11 @@ const Dashboard = () => {
   )
 }
 
-const PostWidget = () => {
+const PostWidget = (props) => {
   return (
     <div className='h-48 w-full my-2 flex items-end rounded-lg bg-beach bg-cover bg-top' style={{ backgroundImage: 'url(/trees.jpg)' }} >
       <div className='p-2 mb-5 ml-5 backdrop-filter backdrop-blur-3xl rounded-md' >
-        Planting Trees at MHHS Parkway
+        {props.name}
       </div>
     </div>
   )
@@ -56,8 +58,8 @@ const EventWidget = (props) => {
     <div className='w-full p-3 flex bg-gray-100 rounded-md mt-3' >
       <img src="/event.jpeg" width='75' height='100' alt="Event" className='bg-cover rounded-md' />
       <div className='ml-3' >
-        <h3 className='mb-2 font-bold' >MHHS Foodrive</h3>
-        <p className='text-sm' > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+        <h3 className='mb-2 font-bold' >{props.name}e</h3>
+        <p className='text-sm' >{props.description}</p>
       </div>
     </div>
   )
