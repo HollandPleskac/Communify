@@ -56,8 +56,8 @@ const EventWidget = (props) => {
     <div className='w-full p-3 flex bg-gray-100 rounded-md mt-3' >
       <img src="/event.jpeg" width='75' height='100' alt="Event" className='bg-cover rounded-md' />
       <div className='ml-3' >
-        <h3 className='mb-2 font-bold' >Random Festival</h3>
-        <p className='text-sm' >fhwaiufh aiuwfhiua awifh ahuh awiuf fnwaionff jfoijio ao aowifn</p>
+        <h3 className='mb-2 font-bold' >MHHS Foodrive</h3>
+        <p className='text-sm' > Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
       </div>
     </div>
   )
