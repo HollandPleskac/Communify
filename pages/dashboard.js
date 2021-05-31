@@ -18,7 +18,7 @@ const Dashboard = () => {
           <WeatherWidget />
           <EventWidget name='Pumpkin Festival' description='The pumpkin festival is a 2 day event taking place at the
           Mountain House High School.' />
-          <EventWidget name='Earth Day' description='Celebrate the Earth by coming out the Grant Line to  drive by the school.' />
+          <EventWidget name='Earth Day' description='Celebrate the Earth by coming out the Grant Line to  drive by the school.' />
           <EventWidget name='Halloween' description='Halloween is a fun day where everyone dresses up as
           se.' />
           <div className='flex justify-evenly mt-3' style={{ width: '450px' }} >
@@ -58,7 +58,7 @@ const EventWidget = (props) => {
     <div className='w-full p-3 flex bg-gray-100 rounded-md mt-3' >
       <img src="/event.jpeg" width='75' height='100' alt="Event" className='bg-cover rounded-md' />
       <div className='ml-3' >
-        <h3 className='mb-2 font-bold' >{props.name}e</h3>
+        <h3 className='mb-2 font-bold' >{props.name}</h3>
         <p className='text-sm' >{props.description}</p>
       </div>
     </div>
